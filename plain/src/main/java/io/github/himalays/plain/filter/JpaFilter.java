@@ -1,9 +1,10 @@
-package io.github.himalays.filter;
+package io.github.himalays.plain.filter;
+
 
 import java.util.Objects;
 import java.util.Optional;
 
-import static io.github.himalays.filter.JpaParameter.parameter;
+import static io.github.himalays.plain.filter.JpaParameter.parameter;
 import static java.util.Objects.isNull;
 
 public class JpaFilter {
@@ -14,8 +15,8 @@ public class JpaFilter {
 
     private JpaFilter(String property, JpaOperator operator, Object value) {
         this.property = property;
-        this.value = value;
         this.operator = operator;
+        this.value = value;
     }
 
     public static JpaFilter filter(String property, JpaOperator operator) {

@@ -1,6 +1,5 @@
-package io.github.himalays.filter;
+package io.github.himalays.plain.filter;
 
-import jakarta.persistence.LockModeType;
 
 import java.util.List;
 import java.util.Map;
