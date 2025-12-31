@@ -1,13 +1,12 @@
-package io.github.himalays.filter;
-
+package io.github.himalays.plain.filter;
 import jakarta.persistence.LockModeType;
 
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.IntStream;
 
-import static io.github.himalays.filter.JpaOperator.IS_NULL;
-import static io.github.himalays.filter.JpaQuery.query;
+import static io.github.himalays.plain.filter.JpaOperator.IS_NULL;
+import static io.github.himalays.plain.filter.JpaQuery.query;
 import static java.util.Collections.emptyList;
 import static java.util.Objects.requireNonNull;
 import static java.util.Optional.ofNullable;
@@ -20,7 +19,7 @@ public class JpaQueryBuilder<T> {
     private int position;
     private String selectStatement = "";
     private String whereClause = "";
-    private List<JpaFilter> filters = new ArrayList<>();
+    private final List<JpaFilter> filters = new ArrayList<>();
     private LockModeType lockModeType;
     private final Map<String, Object> hints = new HashMap<>();
 

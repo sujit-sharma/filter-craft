@@ -1,4 +1,4 @@
-package io.github.himalays.filter;
+package io.github.himalays.plain.filter;
 
 import java.io.Serial;
 import java.io.Serializable;
